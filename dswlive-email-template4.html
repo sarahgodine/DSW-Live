@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+        <style type="text/css" id="hs-inline-css">
+          	@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+          	#container {
+                width: 100%;
+                margin: 0px;
+	            	padding: 0px;
+                font-family: 'Montserrat', 'Helvetica';
+            }
+            /* HEADER */
+            .banner .header {
+                font-weight: 300;
+                text-align: center;
+                font-size: 2.5em;
+                margin-top: 5%;
+                color: #4D4C4D;
+                letter-spacing: 5px;
+            }
+            .banner .line {
+                background-color: #979797;
+                width: 95%;
+                height: 1px;
+                margin-left: 2.55%;
+                margin-bottom: 2%;
+            }
+          	.banner a {
+              	text-decoration: none;
+          	}
+            .image {
+                position: relative;
+                width: 100%;
+                text-transform: uppercase;
+            }
+            .image .background {
+                width: 100%;
+            }
+            /* SECTION 1 */
+            .section1 {
+                padding-top: 5%;
+                padding-bottom: 5%;
+              	margin-top: -5px;
+              	background-color: #05D3D8;
+              	color: #035C6B;
+            }
+            .section1 .header {
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-left: 10%;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+              	line-height: 35px;
+              	width: 80%;
+            }
+            .section1 .subhead {
+                font-weight: 500;
+                margin-left: 10%;
+                width: 85%;
+                font-size: .85em;
+                letter-spacing: 2px;
+                line-height: 30px;
+            }
+          	.section1 .subhead a {
+              	color: #035C6B;
+            }
+          	#button-top {
+              	background-color: #035C6B;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-size: .75em;
+                border: none;
+                text-decoration: none;
+                border-radius: 7px;
+                width: 15%;
+                padding: 20px 32px;
+                margin-top: 2%;
+                margin-left: 10%;
+          	}
+            /* SECTION 2 */
+          	.section2-header {
+                color: #035C6B;
+                text-transform: uppercase;
+                font-weight: 600;
+                width: 90%;
+                margin-left: 5%;
+                font-size: 1.5em;
+                letter-spacing: 4px;
+                line-height: 40px;
+                text-align: center;
+/*               	padding-bottom: 3%; */
+              	padding-top: 5%;
+            }
+            .flex-box {
+                display: flex;
+              	flex-wrap: wrap;
+                width: 100%;
+              	padding-top: 3%;
+              	padding-bottom: 5%;
+            }
+            .flex-box div {
+                width: 26.666666%;
+                margin-left: 5%;
+                text-align: center;
+            }
+            .flex-box img {
+                width: 100%;
+              	margin-bottom: 7%;
+            }
+            .flex-box .header {
+                text-transform: uppercase;
+                color: #4D4C4D;
+                font-weight: 600;
+                font-size: 1.25;
+                letter-spacing: 3px;
+                margin-top: -5px;
+              	line-height: 25px;
+            }
+            .flex-box .line-small {
+                background-color: #05D3D8;
+                margin-left: 40%;
+                height: 2px;
+                width: 20%;
+                margin-top: 10%;
+                margin-bottom: 10%;
+            }
+            .flex-box .subhead {
+                color: #636463;
+                font-size: .75em;
+                font-weight: 400;
+                letter-spacing: 2px;
+                line-height: 30px;
+                width: 90%;
+                margin-left: 5%;
+            }
+            /* SECTION 3 */
+            .section3 {
+                text-align: center;
+              	background-color:#035C6B;
+              	color: #ffffff;
+              	padding-top: 5%;
+              	padding-bottom: 5%;
+            }
+            .section3 .header {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.75em;
+                letter-spacing: 4px;
+              	line-height: 45px;
+              	width: 60%;
+              	margin-left: 20%;
+            }
+            .section3 .subhead {
+                font-weight: 400;
+                font-size: .75em;
+                letter-spacing: 3px;
+                line-height: 25px;
+                width: 40%;
+                margin-left: 30%;
+            }
+            button {
+                background-color: #05D3D8;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-size: .75em;
+                border: none;
+                text-decoration: none;
+                border-radius: 7px;
+                width: 15%;
+                padding: 20px 32px;
+                margin-top: 2%;
+/*                 margin-bottom: 5%; */
+            }
+						/* SECTION 4 */
+          	.section4 {
+              background-color: #05D3D8;
+              color: #035C6B;
+              text-align: center;
+              padding-top: 5%;
+              padding-bottom: 5%;
+          	}
+          	.section4 .header {
+              	text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.75em;
+                letter-spacing: 4px;
+              	line-height: 45px;
+          	}
+          	.section4 .subhead {
+                font-weight: 500;
+                margin-left: 10%;
+                width: 85%;
+                font-size: .85em;
+                letter-spacing: 2px;
+                line-height: 30px;
+            }
+          	.section4 a {
+                font-weight: 500;
+                font-size: 1em;
+                letter-spacing: 2px;
+                line-height: 30px;
+/*               	text-decoration: none; */
+              	color: #035C6B;
+              	text-transform: uppercase;
+            }
+          	/* MEDIA QUERIES */
+            @media all and (max-width: 1205px) {
+                .section3 .subhead {
+                    width: 50% !important;
+                    margin-left: 25% !important;
+                }
+                button {
+                    width: 20% !important;
+                }
+                #button-top {
+                    width: 20% !important;
+                }
+            }
+            @media all and (max-width: 1030px) {
+                button {
+                    width: 23% !important;
+                }
+              	#button-top {
+                    width: 23% !important;
+                }
+            }
+          	 @media all and (max-width: 870px) {
+                button {
+                    width: 25% !important;
+                }
+               	#button-top {
+                    width: 25% !important;
+                }
+            }
+            @media all and (max-width: 768px) {
+                .section1 .line {
+                    margin-bottom: 0% !important;
+                }
+                .flex-box div {
+                    width: 70% !important;
+                    margin-left: 15% !important;
+                    text-align: center !important;
+                    margin-top: 7% !important;
+                }
+              	
+              	.flex-box img {
+                  width: 100%;
+              	}
+                .flex-box .line-small {
+                    background-color: #05D3D8 !important;
+                    margin-left: 40% !important;
+                    height: 2px !important;
+                    width: 20% !important;
+                    margin-top: 10% !important;
+                    margin-bottom: 10% !important; 
+                }
+                .section3 .subhead {
+                    width: 60% !important;
+                    margin-left: 20% !important;
+                }
+            }
+            @media all and (max-width: 695px) {
+                button {
+                    width: 45% !important;
+                }
+                .flex-box div {
+                    width: 60% !important;
+                    margin-left: 20% !important;
+                    text-align: center !important;
+                    margin-top: 7% !important;
+                }
+              	#button-top {
+                    width: 37% !important;
+                }
+            }
+            @media all and (max-width: 500px) {
+                .section3 .header {
+                    font-size: 1.5em !important;
+                    letter-spacing: 2px !important;
+                    margin-top: 10% !important;
+                }
+                .flex-box div {
+                    width: 70% !important;
+                    margin-left: 15% !important;
+                    text-align: center !important;
+                    margin-top: 7% !important;
+                }
+                .flex-box .line-small {
+                    background-color: #05D3D8 !important;
+                    margin-left: 40% !important;
+                    height: 2px !important;
+                    width: 20% !important;
+                    margin-top: 10% !important;
+                    margin-bottom: 10% !important; 
+                }
+              	#button-top {
+                    width: 45% !important;
+                }
+            }
+            @media all and (max-width: 400px) {
+                .banner .header {
+                    margin-top: 7% !important;
+                }
+                /* SECTION 1 */
+                .section1 .header {
+                    font-size: 1.15em !important;
+                    letter-spacing: 2px !important;
+                }
+                .section1 .subhead {
+                    font-size: .75em !important;
+                    letter-spacing: 2px !important;
+                    line-height: 30px !important;
+                }
+                /* SECTION 2 */
+                .flex-box div {
+                    width: 80% !important;
+                    margin-left: 10% !important;
+                    text-align: center !important;
+                    margin-top: 7% !important;
+                }
+                .flex-box .line-small {
+                    background-color: #05D3D8 !important;
+                    margin-left: 40% !important;
+                    height: 2px !important;
+                    width: 20% !important;
+                    margin-top: 10% !important;
+                    margin-bottom: 10% !important; 
+                }
+                /* SECTION 3 */
+                .section3 .header {
+                    font-size: 1.25em !important;
+                    letter-spacing: 2px !important;
+                    margin-top: 10% !important;
+                }
+                .section3 .subhead {
+                    width: 70% !important;
+                    margin-left: 15% !important;
+                    font-size: .75em !important;
+                    letter-spacing: 2px !important;
+                    line-height: 30px !important;
+                }
+                button {
+                    width: 55% !important;
+                    margin-bottom: 10% !important;
+                }
+              	#button-top {
+                    width: 50% !important;
+                }
+            }
+          </style>
+    </head>
+    <body id="container">
+        <!-- Preview text (text which appears right after subject in certain email clients) -->
+        <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+        <!-- Insert body here -->
+      	<header class="banner"> 
+          	<a href="https://dswlive.intelivideo.com/" target="_blank"><p class="header">#<strong>DSW</strong>LIVE</p></a>
+            <div class="line"></div>
+            <div class="image">
+                <a href="https://dswlive.intelivideo.com/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/email4-header-2.png" class="background"></a>
+            </div>
+        </header>
+        <section class="section1">
+            <p class="header"> Coming up today on DSW Live | 11AM - 2PM MDT</p>
+            <p class="subhead"><strong>Rich Herrmann</strong> | Director VP of Product at <a href="https://oseberg.io/" target="_blank">Oseberg</a><br>
+              									<strong>Aaron Duke</strong> | VP of Product at <a href="https://www.cirrusmd.com/" target="_blank">CirrusMD Inc.</a> <br>
+          											<strong>Cameron Brown</strong> | Founder of <a href="https://thrivingcollective.com/" target="_blank">Thriving Collective</a> <br>
+          											<strong>Phil Weiser</strong> | Running for <a href="https://philforcolorado.com/" target="_blank">Attorney General</a> <br>
+          											<strong>Castle Searcy and Brian Corrigan</strong> | Designer Track Chairs of  <a href="https://www.denverstartupweek.org/get-involved/team" target="_blank">Denver Startup Week</a> <br>
+          											<strong>Jennifer Feigert</strong> | Senior Director of <a href="https://ondemand.purebarre.com/" target="_blank">Pure Barre on Demand</a><br>
+          											<strong>Sam Tarantino</strong> | Founder of <a href="https://chromatic.fm/" target="_blank">Chromatic.FM</a> </p>
+          	<a href="https://dswlive.intelivideo.com/" target="_blank" ><button id="button-top" style="cursor:pointer">watch here</button></a>
+        </section>
+        <section class="section2">
+          	<p class="section2-header">Watch a few of our DSW Live interviews below</p>
+            <div class="flex-box">
+                <div>
+                    <a href="https://dswlive.intelivideo.com/assets/dsw-founders-2018-mp4" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/founders.png" ></a>
+                    <p class="header">Tami Door, Erik Mitisek, Ben Deda <br> Founders of Denver Startup Week</p>
+                    <div class="line-small"></div>
+                    <p class="subhead">Denver Startup Week is about innovation for founders, developers, 
+                      									product managers, designers, marketers, sales teams, and makers.</p>
+                </div>
+                <div>
+                    <a href="https://dswlive.intelivideo.com/assets/rorke-denver-dsw-2018-mp4" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/rorke.png" ></a>
+                    <p class="header">Rorke Denver <br> Founder of Ever Onward</p>
+                    <div class="line-small"></div>
+                    <p class="subhead">Ever Onward uses Navy SEAL principles to call leaders to action, 
+                      									to suffer, and to be bold so they can perform at their very highest levels.</p>
+                </div>
+                <div>
+                    <a href="https://dswlive.intelivideo.com/assets/tripcents-dsw-2018-mp4" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/tripcents.png" ></a>
+                    <p class="header">Brantley Pace and Jennifer McMillen <br> Founders of Tripcents</p>
+                    <div class="line-small"></div>
+                    <p class="subhead">Tripcents is a travel and savings app built for the Millennial traveler 
+                      									which allows users to automatically build a travel fund.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <p class="header">TUNE IN TO THE LAST DAY OF THE DENVER STARTUP WEEK ACTION <br> 11:00AM - 2:00PM MDT</p>
+            <p class="subhead">DSW Live is interviewing founders, developers, product managers, 
+              designers, marketers, sales teams, and makers in the startup space from the Denver community.</p>
+            <a href="https://dswlive.intelivideo.com/" target="_blank" ><button style="cursor:pointer">watch here</button></a>
+        </section>
+      	<section class="section4">
+            <p class="header">Did you miss our live stream? </p>
+            <p class="subhead">We'll have all of our interviews available on our DSW Live channel in the coming weeks.</p>
+            <a href="https://dswlive.intelivideo.com/" target="_blank" ><p class="sub-subhead">DSW Live Hosted by Intelivideo</p></a>
+        </section>
+        <!-- Office location information and unsubscribe links -->
+        <!-- START FOOTER -->
+            <div class="footer" style="clear: both; background-color: #34495e; padding-top: 10px; text-align: center; width: 100%;">
+            {{ hubspot_analytics_tracking_code }}
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                <tr>
+                  <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #e6e6e6; text-align: center;" valign="top" align="center">
+                    <a href="https://www.intelivideo.com/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/iv-logo-white-1.png" style="width:120px" alt="Intelivideo"/></a><br>
+                    {{ site_settings.company_name }}&nbsp;<br>
+                    {{ site_settings.company_street_address_1 }}
+                    {{ site_settings.company_city }}&nbsp;
+                    {{ site_settings.company_state }}&nbsp;
+                    <br> Don't like these emails? <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="text-decoration: underline; color: #e6e6e6; font-size: 12px; text-align: center;">Unsubscribe</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #e6e6e6; text-align: center;" valign="top" align="center">
+                    Powered by <a href="https://intelivideo.com" style="color: #e6e6e6; font-size: 12px; text-align: center; text-decoration: underline;">Intelivideo</a>.
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- END FOOTER -->
+    </body>
+</html>

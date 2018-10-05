@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+        <style type="text/css" id="hs-inline-css">
+          	@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+          	#container {
+                width: 100%;
+                margin: 0px;
+	            	padding: 0px;
+                font-family: 'Montserrat', 'Helvetica';
+            }
+            /* HEADER */
+            .banner {
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+          	.banner img {
+                width: 100%;
+            }
+            .banner .subhead {
+                color: #05D3D8;
+                position: absolute;
+                top: 35%;
+                left: 7%;
+                font-weight: 600;
+                font-size: 2em;
+                letter-spacing: 10px;
+                text-transform: uppercase;
+            }
+            .banner .header {
+                color: #FFFFFF;
+                position: absolute;
+                top: 29%;
+                left: 7%;
+                font-weight: 400;
+                font-size: 8em;
+                letter-spacing: 20px;
+                text-transform: uppercase;
+            }
+            .banner .sub-subhead {
+                color: #FFFFFF;
+                position: absolute;
+                top: 65%;
+                left: 7%;
+                font-weight: 300;
+                font-size: 1.25em;
+                letter-spacing: 8px;
+            }
+            /* SECTION 1 */
+            .section1 {
+                background-color: #05D3D8;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                margin-top: -5px;
+                color: #035C6B;
+            }
+            .section1 .header {
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-left: 10%;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+              	line-height: 35px;
+            }
+            .section1 .subhead {
+                font-weight: 500;
+                margin-left: 10%;
+                width: 85%;
+                font-size: .85em;
+                letter-spacing: 2px;
+                line-height: 30px;
+            }
+          	.section1 .subhead a {
+              	color: #035C6B;
+            }
+            /* SECTION 2 */
+            .section2 {
+                background-color: #F7F7F7;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+            .section2 .header {
+                color: #035C6B;
+                text-transform: uppercase;
+                font-weight: 600;
+                width: 70%;
+                margin-left: 15%;
+                font-size: 1.5em;
+                letter-spacing: 4px;
+                line-height: 40px;
+                text-align: center;
+            }
+/*             .section2 .subhead {
+                color: #4D4C4D;
+                font-weight: 400;
+                width: 50%;
+                margin-left: 25%;
+                font-size: .75em;
+                letter-spacing: 2px;
+                line-height: 30px;
+                text-align: center;
+            } */
+            .flex-box {
+                display: flex;
+              	flex-wrap: wrap;
+                width: 100%;
+                margin-top: 5%;
+                margin-bottom: 3%;
+            }
+            .flex-box1 {
+                background-color: #FFFFFF;
+                width: 31.5%;
+                margin-left: 10%;
+                border-radius: 7px;
+                padding: 3%;
+
+            }
+            .flex-box2 {
+                background-color: #FFFFFF;
+                width: 31.5%;
+                margin-left: 5%;
+                border-radius: 7px;
+                padding: 3%;
+            }
+            .flex-box-header {
+                font-weight: 600;
+                font-size: 1.25em;
+                text-transform: uppercase;
+                color: #4D4C4D;
+                letter-spacing: 3px;
+              	line-height: 32px;
+            }
+            .flex-box-subhead {
+                text-transform: lowercase;
+                font-weight: 400;
+                font-size: .75em;
+                color: #636463;
+                letter-spacing: 2px;
+                margin-top: -7px;
+            }
+            .flex-box img {
+                width: 100%;
+                margin-top: 6%;
+                margin-bottom: 6%;
+            }
+            .flex-box-description {
+                font-weight: 400;
+                font-size: 1em;
+                color: #636463;
+                letter-spacing: 4px;
+                width: 100%;
+                line-height: 30px;
+            }
+            .flex-box-link {
+                font-weight: 600;
+                font-size: .7em;
+                color: #05D3D8;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-decoration: none;
+            }
+            /* SECTION 3 */
+            .section3 {
+                background-color: #05D3D8;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                margin-top: -5px;
+              	color: #035C6B;
+            }
+            .section3 .header {
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-left: 10%;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+            }
+            .section3 .subhead {
+                font-weight: 500;
+                margin-left: 10%;
+                width: 40%;
+                font-size: .85em;
+                letter-spacing: 2px;
+                line-height: 25px;
+            }
+            button {
+                background-color: #035C6B;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-size: .75em;
+                border: none;
+                text-decoration: none;
+                border-radius: 7px;
+                width: 15%;
+                padding: 20px 32px;
+                margin-top: 2%;
+                margin-left: 10%;
+            }
+          	/* MEDIA QUERIES */
+            @media all and (max-width: 1205px) {
+                .section1 .subhead {
+/*                     width: 50% !important; */
+                }
+                .section3 .subhead {
+                    width: 50% !important;
+                }
+                button {
+                    width: 20% !important;
+                }
+            }
+            @media all and (max-width: 870px) {
+                button {
+                    width: 25% !important;
+                }
+            }
+            @media all and (max-width: 768px) {
+                /* SECTION 1 */
+                .section1 .subhead {
+/*                     width: 70% !important; */
+                }
+                /* SECTION 2 */
+/*                 .section2 .subhead {
+                    width: 70% !important;
+                    margin-left: 15% !important;
+                } */
+                .flex-box1 {
+                    width: 70% !important;
+                    margin-left: 12% !important;
+                    margin-top: 2% !important;
+                }
+                .flex-box2 {
+                    width: 70% !important;
+                    margin-left: 12% !important;
+                    margin-top: 8% !important;
+                }
+                .flex-box img {
+                    width: 100% !important;
+                    margin-top: 3% !important;
+                    margin-bottom: 3% !important;
+                }
+                .flex-box-description {
+                    letter-spacing: 3px !important;
+                }
+                /* SECTION 3 */
+                .section3 .subhead {
+                    width: 70% !important;
+                }
+                button {
+                    width: 27% !important;
+                }
+            }
+            @media all and (max-width: 645px) {
+                button {
+                    width: 45% !important;
+                }
+            }
+            @media all and (max-width: 400px) {
+                /* SECTION 1 */
+                .section1 .header {
+                    font-size: 1.15em !important;
+                    letter-spacing: 2px !important;
+                }
+                .section1 .subhead {
+/*                     width: 70% !important; */
+                    font-size: .75em !important;
+                    letter-spacing: 2px !important;
+                    line-height: 30px !important;
+                }
+                /* SECTION 2 */
+                /* SECTION 3 */
+                .section3 .header {
+                    font-size: 1.15em !important;
+                    letter-spacing: 2px !important;
+                }
+                .section3 .subhead {
+                    width: 70% !important;
+                    font-size: .75em !important;
+                    letter-spacing: 2px !important;
+                    line-height: 30px !important;
+                }
+                button {
+                    width: 55% !important;
+                }
+            }
+          </style>
+    </head>
+    <body id="container">
+        <!-- Preview text (text which appears right after subject in certain email clients) -->
+        <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+        <!-- Insert body here -->
+      	<header class="banner">
+            <a href="https://dswlive.intelivideo.com/" target="_blank" ><img src="https://cdn2.hubspot.net/hubfs/420233/Image/email3-header.png" ></a>
+        </header>
+        <section class="section1">
+            <p class="header"> Coming up today on DSW Live <br>
+              									11AM - 2PM MDT</p>
+            <p class="subhead"><strong>Mike Ricci</strong> | Founder and Head Coach of <a href="https://d3multisport.com/our-coaches/mike-ricci" target="_blank">D3 Multisport</a><br>
+              									<strong>Lee Mayer</strong> | CEO of <a href="https://havenly.com/" target="_blank">Havenly</a> <br>
+          											<strong>Adam Burrows</strong> | Chief Business Officer at <a href="https://www.guildeducation.com/" target="_blank">Guild Education</a> <br>
+          											<strong>Dave Camerucci</strong> | Managing Director of <a href="https://startupcolorado.org/" target="_blank">Startup Colorado</a> <br>
+          											<strong>Emily Schromm</strong> | Inventor of the <a href="https://theempack.com/" target="_blank">EmPack</a> & EmFit Challenge <br>
+          											<strong>Jennifer Ehlen</strong> | Founder of <a href="https://brazenglobal.com/" target="_blank">Brazen Global</a><br>
+          											<strong>Rick Griffith</strong> | Founder of <a href="http://www.morematter.com/" target="_blank">More Matter</a> </p>
+          	<a href="https://dswlive.intelivideo.com/" target="_blank" ><button style="cursor:pointer">watch here</button></a>
+        </section>
+        <section class="section2">
+            <p class="header">DID YOU MISS THE DSW LIVE BROADCAST? <br> WATCH A COUPLE OF OUR INTERVIEWS FROM EARLIER IN THE WEEK!</p>
+<!--             <p class="subhead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> -->
+            <div class="flex-box">
+                <div class="flex-box1">
+                    <p class="flex-box-header">Vince Kadlubek | CEO and Founder of Meow Wolf </p>
+<!--                     <p class="flex-box-subhead">this is this subhead</p> -->
+                    <a href="https://dswlive.intelivideo.com/assets/vince-kadlubek-dsw-2018-mp4" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/vince.png" ></a>
+                    <p class="flex-box-description"> Meow Wolf creates immersive, interactive experiences to transport audiences of 
+                      															all ages into fantastic realms of story and exploration. They champion otherness, weirdness, challenging norms, 
+                      															radical inclusion, and the power of creativity to change the world. </p>
+                    <a href="https://dswlive.intelivideo.com/assets/vince-kadlubek-dsw-2018-mp4" target="_blank" class="flex-box-link"><p  style="cursor:pointer">watch here</p></a>
+                </div>
+                <div class="flex-box2">
+                    <p class="flex-box-header">Mike Biselli | President of Catalyst HTI</p>
+<!--                     <p class="flex-box-subhead">this is the subhead</p> -->
+                    <a href="https://dswlive.intelivideo.com/assets/mike-biselli-2018-denver-startup-week" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/mike.png" ></a>
+                    <p class="flex-box-description"> Catalyst HTI is a first-of-its-kind facility that is bringing together private enterprise (startups to Fortune 100), 
+                      															government, academic and non-profit organizations with healthcare providers 
+                      															and payers to accelerate innovation and drive real, lasting change. </p>
+                    <a href="https://dswlive.intelivideo.com/assets/mike-biselli-2018-denver-startup-week" target="_blank" class="flex-box-link"><p style="cursor:pointer">watch here</p></a>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <p class="header">DSW LIVE IS ON AT 11:00 AM/MDT</p>
+            <p class="subhead">Learn from leading founders, developers, product managers, designers, marketers, sales teams, and makers from the Mile High City!</p>
+            <a href="https://dswlive.intelivideo.com/" target="_blank" ><button style="cursor:pointer">watch here</button></a>
+        </section>
+        <!-- Office location information and unsubscribe links -->
+        <!-- START FOOTER -->
+            <div class="footer" style="clear: both; background-color: #34495e; padding-top: 10px; text-align: center; width: 100%;">
+            {{ hubspot_analytics_tracking_code }}
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                <tr>
+                  <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #e6e6e6; text-align: center;" valign="top" align="center">
+                    <a href="https://www.intelivideo.com/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/iv-logo-white-1.png" style="width:120px" alt="Intelivideo"/></a><br>
+                    {{ site_settings.company_name }}&nbsp;<br>
+                    {{ site_settings.company_street_address_1 }}
+                    {{ site_settings.company_city }}&nbsp;
+                    {{ site_settings.company_state }}&nbsp;
+                    <br> Don't like these emails? <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="text-decoration: underline; color: #e6e6e6; font-size: 12px; text-align: center;">Unsubscribe</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #e6e6e6; text-align: center;" valign="top" align="center">
+                    Powered by <a href="https://intelivideo.com" style="color: #e6e6e6; font-size: 12px; text-align: center; text-decoration: underline;">Intelivideo</a>.
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- END FOOTER -->
+    </body>
+</html>

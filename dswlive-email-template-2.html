@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+        {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+        <style type="text/css" id="hs-inline-css">
+						/* FONTS */
+          	@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+          	#container {
+                width: 100%;
+                margin: 0px;
+	            	padding: 0px;
+                font-family: 'Montserrat', 'Helvetica';
+            }
+            /* HEADER */
+            .banner {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+            }
+          	.banner img {
+                width: 100%;
+            }
+						/* SECTION 1 */
+          	.section1 {
+                background-color: #05D3D8;
+                padding-top: 5%;
+/*                 padding-bottom: 5%; */
+                margin-top: -5px;
+                color: #035C6B;
+            }
+            .section1 .header {
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-left: 10%;
+              	width: 85%;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+              	line-height: 35px;
+            }
+            .section1 .subhead {
+                font-weight: 500;
+                margin-left: 10%;
+                width: 85%;
+                font-size: .85em;
+                letter-spacing: 2px;
+                line-height: 30px;
+            }
+          	.section1 .subhead a {
+              	color: #035C6B;
+            }
+          	#button-top {
+              	background-color: #035C6B;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-size: .75em;
+                border: none;
+                text-decoration: none;
+                border-radius: 7px;
+                width: 15%;
+                padding: 20px 32px;
+                margin-top: 2%;
+                margin-left: 10%;
+          	}
+            /* SECTION  2*/
+            .section2 {
+                text-align: center;
+              	background-color: #035C6B;
+              	color: #ffffff;
+              padding-top: 7%;
+            }
+            .section2 .header {
+/*                 color: #4D4C4D; */
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 2em;
+                letter-spacing: 4px;
+/*                 margin-top: 7%; */
+              	width: 50%;
+              	margin-left: 25%;
+              	line-height: 42px;
+            }
+            .section2 img {
+                width: 45%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+            .section2 .subhead {
+/*                 color: #636463; */
+                font-weight: 400;
+                font-size: 1em;
+                letter-spacing: 3px;
+                line-height: 25px;
+                width: 45%;
+                margin-left: 27.5%;
+            }
+            button {
+                background-color: #05D3D8;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+                font-size: .8em;
+                border: none;
+                text-decoration: none;
+                border-radius: 7px;
+                width: 20%;
+                padding: 20px 32px;
+                margin-top: 3%;
+                margin-bottom: 7%;
+            }
+          	/* MEDIA QUERIES */
+          	@media all and (max-width: 1205px) {
+                #button-top {
+                    width: 20% !important;
+                }
+            }
+            @media all and (max-width: 1030px) {
+                button {
+                    width: 23% !important;
+                }
+              	#button-top {
+                    width: 23% !important;
+                }
+              	.section2 .header {
+                  	width: 70% !important;
+                  	margin-left: 15% !important;
+              	}
+            }
+            @media all and (max-width: 775px) {
+                /* MIDDLE SECTION */
+                .section2 .header {
+                    /* font-size: 1.75em; */
+                    margin-top: 9% !important;
+                }
+                .section2 img {
+                    width: 60% !important;
+                }
+                .section2 .subhead {
+                    width: 60% !important;
+                    margin-left: 20% !important;
+                }
+                button {
+                    width: 30% !important;
+                    margin-bottom: 9% !important;
+                }
+              	#button-top {
+                    width: 30% !important;
+                }
+              	.section2 .header {
+                  	width: 80% !important;
+                  	margin-left: 10% !important;
+              	}
+            }
+            @media all and (max-width: 645px) {
+                .section2 .header {
+                    font-size: 1.5em !important;
+                }
+                button {
+                    width: 37% !important;
+                }
+              	#button-top {
+                    width: 37% !important;
+                }
+            }
+            @media all and (max-width: 490px) {
+                button {
+                    width: 45% !important;
+                }
+              	#button-top {
+                    width: 45% !important;
+                }
+              	.section2 .header {
+                  	width: 85% !important;
+                  	margin-left: 7.5% !important;
+              	}
+            }
+            @media all and (max-width: 400px) {
+                /* MIDDLE SECTION */
+              	.section1 .header {
+                    font-size: 1.15em !important;
+                    letter-spacing: 2px !important;
+                }
+                .section1 .subhead {
+/*                     width: 70% !important; */
+                    font-size: .75em !important;
+                    letter-spacing: 2px !important;
+                    line-height: 30px !important;
+                }
+                .section2 .header {
+                    font-size: 1.25em !important;
+                    margin-top: 12% !important;
+                    width: 90% !important;
+                    margin-left: 5% !important;
+                }
+                .section2 img {
+                    width: 70% !important;
+                    margin-top: 5% !important;
+                }
+                .section2 .subhead {
+                    width: 80% !important;
+                    margin-left: 10% !important;
+                    margin-top: 5% !important;
+                }
+                button {
+                    width: 50% !important;
+                    margin-bottom: 12% !important;
+                    margin-top: 5% !important;
+                }
+              	#button-top {
+                    width: 50% !important;
+                }
+            }
+          </style>
+    </head>
+    <body id="container">
+        <!-- Preview text (text which appears right after subject in certain email clients) -->
+        <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+        <!-- Insert body here -->
+      	<header class="banner">
+            <a href="https://dswlive.intelivideo.com/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/email2-header-6.png" ></a>
+        </header>
+      	<section class="section1">
+            <p class="header"> Coming up today on DSW Live | 11AM - 2PM MDT</p>
+            <p class="subhead"><strong>Chrissy Bellmen</strong> | Founder and CEO of <a href="https://levooil.com/" target="_blank">LEVO</a><br>
+              									<strong>Russell Castagnaro</strong> | CEO ond Co-Founder of <a href="http://wampei.com/" target="_blank">Wampei</a> <br>
+          											<strong>Bassil El-Khatib</strong> | Co-Founder of <a href="https://www.linkedin.com/company/qwa/" target="_blank">QWA Media</a> <br>
+          											<strong>David Tabor</strong> | Senior Vice President of <a href="http://cochamber.com/" target="_blank">Colorado Association of Commerce & Industry</a> <br>
+          											<strong>Anna Leer</strong> | Vice President of <a href="https://yacenter.org/youthbiz/" target="_blank">Youthbiz</a> <br>
+          											<strong>Rick Grossman</strong> | Author at Entrepreneur Magazine's <a href="http://www.franchisebiblestudy.com/" target="_blank">Franchise Bible</a> </p>
+          	<a href="https://dswlive.intelivideo.com/" target="_blank" ><button id="button-top" style="cursor:pointer">watch here</button></a>
+        </section>
+        <section class="section2">
+        	<p class="header">don't miss a minute of the denver startup week action!</p>
+          <a href="https://dswlive.intelivideo.com/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/Image/devices-mockup.png" ></a>
+          <p class="subhead">Hear from the leaders and innovators that are making it happen!</p>
+          <p class="subhead">They'll share stories that will teach and inspire, 
+            	so you can learn a little more about how to define your Mile High Hustle. </p>
+        	<a href="https://dswlive.intelivideo.com/" target="_blank" ><button style="cursor:pointer">watch here</button></a>
+        </section>
+        <!-- Office location information and unsubscribe links -->
+        <!-- START FOOTER -->
+            <div class="footer" style="clear: both; background-color: #34495e; padding-top: 10px; text-align: center; width: 100%;">
+            {{ hubspot_analytics_tracking_code }}
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                <tr>
+                  <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #e6e6e6; text-align: center;" valign="top" align="center">
+                    <a href="https://www.intelivideo.com/" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/420233/iv-logo-white-1.png" style="width:120px" alt="Intelivideo"/></a><br>
+                    {{ site_settings.company_name }}&nbsp;<br>
+                    {{ site_settings.company_street_address_1 }}
+                    {{ site_settings.company_city }}&nbsp;
+                    {{ site_settings.company_state }}&nbsp;
+                    <br> Don't like these emails? <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="text-decoration: underline; color: #e6e6e6; font-size: 12px; text-align: center;">Unsubscribe</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #e6e6e6; text-align: center;" valign="top" align="center">
+                    Powered by <a href="https://intelivideo.com" style="color: #e6e6e6; font-size: 12px; text-align: center; text-decoration: underline;">Intelivideo</a>.
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- END FOOTER -->
+    </body>
+</html>
