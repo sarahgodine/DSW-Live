@@ -1,1 +1,9 @@
 # DSW-Live
+
+This project was for DSW Live, a live broadcast of Denver Startup Week. DSW Live was hosted by Intelivideo and each day they produced a three-hour live broadcast. During the broadcast they interviewed many companies who are in the first stages of bringing their startup to life. It was my task to create a brand and image for DSW Live to get the word out to viewers. In 3 weeks I created a logo, designed 25 social graphics, and developed four email templates.
+
+My first task for this project was to create a logo for DSW Live. This logo needed to distingush DSW Live from its parent, Denver Startup Week. However, the logo needed to maintain the same feel and astetic of Dever Startup Week. I needed to make sure the the DSW Live logo was unique, but still clearly tied to Denver Startup week.
+
+Before Denver Startup Week I needed to create 20 social graphics each of which needed to be unique. I divded those graphics between Twitter, FaceBook, LinkedIn, and Instagram with each platform having five of its own. This task was more daunting than I had anticipated. I needed to make sure that I kept the feel and guidelines of Denver Startup Week while ensuring that the graphics were not repetitive. I wanted the graphics to have my own personal touches, but I wanted them to be recognizable as Denver Startup Week without the viewer needing to read the graphic.
+
+I needed to design and develop four email templates. Prior to Denver Startup Week, it was my job to create four email templates that would be sent out on the last four days of the week. I only had one guidline which was the structure of the email; otherwise, I had free rein on the design. For my four email templates, I wanted to make sure they were all cohesive yet different and interesting in their own way. I carried certain aspects throughout such as the CTA button, global footer, and color palette.
